@@ -13,10 +13,6 @@ System.out.println("stored value"+value);
 }
 
 
-
-
-
-
 class Store<T>{
 
 private T element;
