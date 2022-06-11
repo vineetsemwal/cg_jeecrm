@@ -16,7 +16,12 @@ list.add(emp2);
 list.add(emp3);
 list.add(emp4);
 
-demo.sortList(list);
+System.out.println("**sorting list by age");
+demo.sortListByAge(list);
+demo.display(list);
+
+System.out.println("**sorting list by name");
+demo.sortListByName(list);
 demo.display(list);
 }
 
@@ -27,16 +32,41 @@ System.out.println("name="+iterated.name+",age="+iterated.age);
 }
 }
 
-public List<Employee> sortList(List<Employee>list)
+public void sortListByAge(List<Employee>list)
 {
 Comparator<Employee>nameComp=new AgeComparator();
 list.sort(nameComp);
-return list;
+
+
+}
+
+
+
+
+public void sortListByName(List<Employee>list)
+{
+Comparator<Employee>nameComp=new NameComparator();
+list.sort(nameComp);
 
 }
 
 
+
+
 }
+
+class NameComparator implements Comparator<Employee>{
+
+@Override
+public int compare(Employee emp1, Employee emp2){
+String name1=emp1.name;
+String name2=emp2.name;
+int comparison= name1.compareTo(name2);
+return comparison;
+}
+
+}
+
 
 class AgeComparator implements Comparator<Employee>{
 
