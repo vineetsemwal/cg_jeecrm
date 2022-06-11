@@ -6,7 +6,7 @@ class ListEx2{
 
 public static void main(String args[]){
 ListEx2 demo=new ListEx2();
-List<Employee>list=new ArrayList<>();
+List<Employee>list=new LinkedList<>();
 Employee emp1=new Employee("vaibhav",22);
 Employee emp2=new Employee("akash",23);
 Employee emp3=new Employee("pragya",21);
